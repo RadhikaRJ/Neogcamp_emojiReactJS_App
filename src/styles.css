@@ -1,0 +1,19 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #fef3c7;
+  margin: auto;
+  color: #9d174d;
+
+  font-family: "Dancing Script", cursive;
+}
+body {
+  background-color: #fef3c7;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+::placeholder {
+  color: #9d174d;
+}
