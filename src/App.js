@@ -37,12 +37,19 @@ export default function App() {
   function onEmojiInput() {
     var updateInput = event.target.value;
     //setUserInput(updateInput);
-    setSweetName(sweetList[updateInput]);
+    var updateInput = sweetList[updateInput];
+    if (updateInput === undefined) {
+      sweet = "No data found in DB";
+      setSweetName(sweet);
+    } else {
+      setSweetName(updateInput);
+    }
   }
   function onClickEmoji(item) {
     // console.log(item);
     //console.log(fetchedmeaning)
-    setSweetName(sweetList[item]);
+    var sweetname = sweetList[item];
+    setSweetName(sweetname);
   }
   return (
     <div className="App">
@@ -61,7 +68,7 @@ export default function App() {
           border: "2px solid #9D174D"
         }}
       />
-      <p>{sweet}</p>
+      <h2 style={{ fontfamily: "sans-serif" }}>{sweet}</h2>
       <div className="grid-container">
         {dictkeys.map((item) => {
           return (
